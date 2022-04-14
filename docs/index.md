@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## Добро пожаловать в команду! 👋
 
-You can use the [editor on GitHub](https://github.com/kimmik8/kimmik8.github.io/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Репозиторий проекта находится [здесь](https://github.com/kimmik8/version_control)!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Для того чтобы посмотреть файлы можно как на странице репозитория, так и склонировав проект в предпочитаемую среду разработки.
 
-### Markdown
+Склонировать проект можно с помощью команды `git clone`
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Основные команды Git
 
-# Header 1
-## Header 2
-### Header 3
+`git init` - для создания git репозтория из директории
 
-- Bulleted
-- List
+`git remote add origin <remote_repository_location>` - для добаления удаленного репозитория. Для выполнения команды нужно заменить <remote_repository_location> ссылкой на репозиторий
 
-1. Numbered
-2. List
+`git status` - проверить текущее состояние репозитория
 
-**Bold** and _Italic_ and `Code` text
+`git add <file_name>` - добавить изменеия конкретного файла
 
-[Link](url) and ![Image](src)
-```
+`git add .` - добасить все внесенные изменения
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+`git commit -m "commit_message"` - закоммитить изменения
 
-### Jekyll Themes
+`git history` - для получения графика истории внесенных изменений. **Важно**: данная команда будет работь после добавления **[этого](https://github.com/kimmik8/version_control/blob/main/config)** файла в настройки репозитория.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kimmik8/kimmik8.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Конвенция наименований веток
 
-### Support or Contact
+- `develop/version` - ветка на которой ведется работа над определенной версией продукта
+- `feature/feature_name` - ветка на которой ведется работа над новой фичей
+- `bugfix/bug_name` - ветка на которой ведется работа по исправлению багов
+- `hotfix/fix_name` - ветка на которой ведется работа по быстрому исправлению ошибок готового продукта
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+**Примерная схема ветвления**
+
+![Screen Shot 2022-04-15 at 12 49 46 AM](https://user-images.githubusercontent.com/82853454/163426840-1927ecd0-564b-4722-93eb-e94e339a649f.png)
+
+Всегда придерживайтесь следующих правил при создании новых веток!
+
+- Для создания новых фичей и исправления ошибок создавать отдельные ветки
+- При необходимости слиянии с `main` веткой нужно создать pull request
+- Прямое слияние с основной веткой только из ветки `develop`
+- **Не пушить** прямых изменений в основную ветку
+
